@@ -53,7 +53,7 @@ export const actualizarMascota = async (req, res) => {
   }
 };
 
-export const getMascotas = async (req, res) => {
+export const ListarMascota = async (req, res) => {
     try {
       const mascotas = await mascotasModel.find({}, "name raza_id foto")
         .populate("raza_id", "name _id")
@@ -71,7 +71,7 @@ export const getMascotas = async (req, res) => {
   };
 
   
-  export const getMascotasId = async (req, res) => {
+  export const ListarMascotasId = async (req, res) => {
     try {
       const idMascota = req.params.id; 
       const mascotas = await mascotasModel.findById(idMascota, "name raza_id foto")
