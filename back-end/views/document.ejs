@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos/documentacion.css" />
+  </head>
+
+  <body>
+    <div class="page">
+      <header class="header"></header>
+      <div class="presentacion">
+        <span>Documentacion de API RestFull</span>
+      </div>
+
+      <div class="requerimientos">
+        <section class="requerimientos">
+          <div class="contenido-requerimientos">
+            <span>registrar usuario</span>
+            <table>
+              <tbody>
+                <tr>
+                  <th>ID de requerimiento</th>
+                  <td>RF01</td>
+                </tr>
+                <tr>
+                  <th>verbo HTTP</th>
+                  <td><span class="btn post">POST</span></td>
+                </tr>
+                <tr>
+                  <th>URL</th>
+                  <td>
+                    <span class="btn url">https://localhost:3000/usuario/register</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>Header</th>
+                  <td>NULL</td>
+                </tr>
+                <tr>
+                  <th>Usuario</th>
+                  <td>Usuarios</td>
+                </tr>
+                <tr>
+                  <th>Peticion Body</th>
+                  <td>
+                    json :
+                    <pre>
+                                    {
+                                    fullName : "String", email: "String"  , password: "String"
+                                    }
+                                    </pre
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <th>Respuesta json</th>
+                  <td>{mesanje : "usuario creado" }</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="requerimientos">
+          <div class="contenido-requerimientos">
+            <span>login</span>
+            <table>
+              <tbody>
+                <tr>
+                  <th>ID de requerimiento</th>
+                  <td>RF02</td>
+                </tr>
+                <tr>
+                  <th>verbo HTTP</th>
+                  <td><span class="btn post">POST</span></td>
+                </tr>
+                <tr>
+                  <th>URL</th>
+                  <td>
+                    <span class="btn url">http://localhost:3000/login</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>Header</th>
+                  <td>NULL</td>
+                </tr>
+                <tr>
+                  <th>Usuario</th>
+                  <td>Usuarios</td>
+                </tr>
+                <tr>
+                  <th>Peticion Body</th>
+                  <td>
+                    json :
+                    <pre>
+                                                {
+                                                    email: "String", password: "String"
+                                                }
+                                                </pre
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <th>Respuesta json</th>
+                  <td>{ "Mensaje": "Usuario autorizado", token: token }</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="requerimientos">
+          <div class="contenido-requerimientos">
+            <span>registar mascota</span>
+            <table>
+              <tbody>
+                <tr>
+                  <th>ID de requerimiento</th>
+                  <td>RF03</td>
+                </tr>
+                <tr>
+                  <th>verbo HTTP</th>
+                  <td><span class="btn post">POST</span></td>
+                </tr>
+                <tr>
+                  <th>URL</th>
+                  <td>
+                    <span class="btn url">http://localhost:3000/mascotas/register</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>Header</th>
+                  <td>token</td>
+                </tr>
+                <tr>
+                  <th>Usuario</th>
+                  <td>Usuarios</td>
+                </tr>
+                <tr>
+                  <th>Peticion Body</th>
+                  <td>
+                    json :
+                    <pre>
+                                        {
+                                        "name" : "String"
+                                        "raza_id" :ObjectId,
+                                        "categorias_id" : ObjectId,
+                                        "generos_id" :ObjectId
+                                        }
+                                    </pre
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <th>Respuesta json</th>
+                  <td>
+                    <pre>
+                                    {
+                                    name: 'paco',
+                                    race_id: new ObjectId('665b430df4d5e5aaf38b9ade'),
+                                    categoria_id: new ObjectId('665b4d43885fb7b97443c819'),
+                                    genero_id: new ObjectId('665e5108b9c026f794b0634c'),
+                                    foto: 'photo-sm-2.svg',
+                                    _id: new ObjectId('665e5e1e64585846e6946731'),
+                                    __v: 0
+                                    }
+                                  </pre
+                    >
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="requerimientos">
+          <div class="contenido-requerimientos">
+            <span>obtener mascotas</span>
+            <table>
+              <tbody>
+                <tr>
+                  <th>ID de requerimiento</th>
+                  <td>RF04</td>
+                </tr>
+                <tr>
+                  <th>verbo HTTP</th>
+                  <td><span class="btn get">GET</span></td>
+                </tr>
+                <tr>
+                  <th>URL</th>
+                  <td>
+                    <span class="btn url">http://localhost:3000/mascotas/listar</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>Header</th>
+                  <td>Token</td>
+                </tr>
+                <tr>
+                  <th>Usuario</th>
+                  <td>Usuarios</td>
+                </tr>
+                <tr>
+                  <th>Peticion Body</th>
+                  <td>
+                    json :
+                    <pre>
+                                                {
+                                                
+                                                }
+                                                </pre
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <th>Respuesta json</th>
+                  <td>
+                    <div>401{ "message": "Credenciales no se proveyeron" }</div>
+                    <div>500 {error en el servidor}</div>
+                    <div>
+                      200
+                      <pre>
+{
+                                "_id": "665e5dfab37f24ea3b085d72",
+                                "name": "lolodrilo",
+                                "race_id": {
+                                "_id": "665b430df4d5e5aaf38b9ade",
+                                "name": "pitbull"
+                                },
+                                "foto": "photo-sm-4.svg"
+                                }</pre
+                      >
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="requerimientos">
+          <div class="contenido-requerimientos">
+            <span>obtener mascota por su id</span>
+            <table>
+              <tbody>
+                <tr>
+                  <th>ID de requerimiento</th>
+                  <td>RF05</td>
+                </tr>
+                <tr>
+                  <th>verbo HTTP</th>
+                  <td><span class="btn get">GET</span></td>
+                </tr>
+                <tr>
+                  <th>URL</th>
+                  <td>
+                    <span class="btn url"
+                      >http://localhost:3000/mascotas/listarID/{id}</span
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <th>Header</th>
+                  <td>token</td>
+                </tr>
+                <tr>
+                  <th>Usuario</th>
+                  <td>Usuarios</td>
+                </tr>
+                <tr>
+                  <th>Peticion Body</th>
+                  <td>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>Respuesta json</th>
+                  <td>
+                    <div>401{ "message": "Credenciales no se proveyeron" }</div>
+                    <div>500 {error en el servidor}</div>
+                    <div>
+                      200
+                      <pre>
+{
+                                                                "_id": "665e5dfab37f24ea3b085d72",
+                                                                "name": "lolodrilo",
+                                                                "race_id": {
+                                                                "_id": "665b430df4d5e5aaf38b9ade",
+                                                                "name": "pitbull"
+                                                                },
+                                                                "foto": "photo-sm-4.svg"
+                                                                }</pre
+                      >
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="requerimientos">
+          <div class="contenido-requerimientos">
+            <span>acutalizar mascota</span>
+            <table>
+              <tbody>
+                <tr>
+                  <th>ID de requerimiento</th>
+                  <td>RF06</td>
+                </tr>
+                <tr>
+                  <th>verbo HTTP</th>
+                  <td><span class="btn put">PUT</span></td>
+                </tr>
+                <tr>
+                  <th>URL</th>
+                  <td>
+                    <span class="btn url">http://localhost:3000/mascotas/actualizar</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>Header</th>
+                  <td>token</td>
+                </tr>
+                <tr>
+                  <th>Usuario</th>
+                  <td>Usuarios</td>
+                </tr>
+                <tr>
+                  <th>Peticion Body</th>
+                  <td>
+                    json :
+                    <pre>
+                                        {
+                                        "name" :"String"",
+                                        "razas" : "ObjectId,
+                                        "categorias" : ObjectId,
+                                        "generos" :"ObjectId
+                                        }
+                                    </pre
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <th>Respuesta json</th>
+                  <td>
+                    <div>200{{ mensaje: "mascota actualizada" }}</div>
+                    <div>500 {error en el servidor}</div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="requerimientos">
+          <div class="contenido-requerimientos">
+            <span>eliminar mascota</span>
+            <table>
+              <tbody>
+                <tr>
+                  <th>ID de requerimiento</th>
+                  <td>RF07</td>
+                </tr>
+                <tr>
+                  <th>verbo HTTP</th>
+                  <td><span class="btn delete">DELETE</span></td>
+                </tr>
+                <tr>
+                  <th>URL</th>
+                  <td>
+                    <span class="btn url"
+                      >http://localhost:3000/mascotas/eliminar/{id}</span
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <th>Header</th>
+                  <td>token</td>
+                </tr>
+                <tr>
+                  <th>Usuario</th>
+                  <td>Usuarios</td>
+                </tr>
+                <tr>
+                  <th>Peticion Body</th>
+                  <td>
+                    json :
+                    <pre></pre>
+                  </td>
+                </tr>
+                <tr>
+                  <th>Respuesta json</th>
+                  <td>
+                    <div>401{ "message": "Credenciales no se proveyeron" }</div>
+                    <div>200 { mensaje: "mascota eliminada" }</div>
+                    <div>500 {mensaje : "error en el servidor"}</div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="requerimientos">
+          <div class="contenido-requerimientos">
+            <span>obetener razas</span>
+            <table>
+              <tbody>
+                <tr>
+                  <th>ID de requerimiento</th>
+                  <td>RF08</td>
+                </tr>
+                <tr>
+                  <th>verbo HTTP</th>
+                  <td><span class="btn get">GET</span></td>
+                </tr>
+                <tr>
+                  <th>URL</th>
+                  <td>
+                    <span class="btn url">http://localhost:3000/razas/listar</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>Header</th>
+                  <td>token</td>
+                </tr>
+                <tr>
+                  <th>Usuario</th>
+                  <td>Usuarios</td>
+                </tr>
+                <tr>
+                  <th>Peticion Body</th>
+                  <td>
+                    json :
+                    <pre></pre>
+                  </td>
+                </tr>
+                <tr>
+                  <th>Respuesta json</th>
+                  <td>
+                    <div>401{ "message": "Credenciales no se proveyeron" }</div>
+                    <div>
+                      200 {_id 665b430df4d5e5aaf38b9ade name "pitbull" __v 0}
+                    </div>
+                    <div>500 {mensaje : "error en el servidor"}</div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="requerimientos">
+          <div class="contenido-requerimientos">
+            <span>obtener categorias</span>
+            <table>
+              <tbody>
+                <tr>
+                  <th>ID de requerimiento</th>
+                  <td>RF09</td>
+                </tr>
+                <tr>
+                  <th>verbo HTTP</th>
+                  <td><span class="btn get">GET</span></td>
+                </tr>
+                <tr>
+                  <th>URL</th>
+                  <td>
+                    <span class="btn url">http://localhost:3000/categorias/listar</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>Header</th>
+                  <td>token</td>
+                </tr>
+                <tr>
+                  <th>Usuario</th>
+                  <td>Usuarios</td>
+                </tr>
+                <tr>
+                  <th>Peticion Body</th>
+                  <td>
+                    json :
+                    <pre></pre>
+                  </td>
+                </tr>
+                <tr>
+                  <th>Respuesta json</th>
+                  <td>
+                    <div>401{ "message": "Credenciales no se proveyeron" }</div>
+                    <div>
+                      200 {_id 665b430df4d5e5aaf38b9ade name "pitbull" __v 0}
+                    </div>
+                    <div>500 {mensaje : "error en el servidor"}</div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="requerimientos">
+          <div class="contenido-requerimientos">
+            <span>Obtener Generos</span>
+            <table>
+              <tbody>
+                <tr>
+                  <th>ID de requerimiento</th>
+                  <td>RF010</td>
+                </tr>
+                <tr>
+                  <th>verbo HTTP</th>
+                  <td><span class="btn get">GET</span></td>
+                </tr>
+                <tr>
+                  <th>URL</th>
+                  <td>
+                    <span class="btn url">http://localhost:3000/genero/listar</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>Header</th>
+                  <td>token</td>
+                </tr>
+                <tr>
+                  <th>Usuario</th>
+                  <td>Usuarios</td>
+                </tr>
+                <tr>
+                  <th>Peticion Body</th>
+                  <td>
+                    json :
+                    <pre></pre>
+                  </td>
+                </tr>
+                <tr>
+                  <th>Respuesta json</th>
+                  <td>
+                    <div>401{ "message": "Credenciales no se proveyeron" }</div>
+                    <div>
+                      200 {_id 665b430df4d5e5aaf38b9ade name "pitbull" __v 0}
+                    </div>
+                    <div>500 {mensaje : "error en el servidor"}</div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
