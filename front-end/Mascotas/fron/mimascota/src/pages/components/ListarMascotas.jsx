@@ -11,8 +11,7 @@ const ListarMascotas = () => {
   useEffect(() => {
     getMascotas();
   }, []);
-
-  // Obtener todos los registros de la base de datos
+  
   const getMascotas = async () => {
     try {
       const response = await axiosCliente.get("/mascotas/listar");
@@ -28,7 +27,7 @@ const ListarMascotas = () => {
     }
   };
 
-  // Mandar solicitud a back-end para eliminar una mascota
+
   const eliminarMascota = async (id) => {
     try {
       const response = await axiosCliente.delete(`/mascotas/eliminar/${id}`);
